@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodEvent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎉 MoodEvent</h1>
+    <p>Partage ton humeur sur l'événement !</p>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <h2>📝 Donner ton avis</h2>
+      <form id="feedbackForm">
+        <input type="text" name="name" placeholder="Ton nom/pseudo" required>
+        <input type="text" name="session" placeholder="Nom de la session" required>
+
+        <label>Ton humeur :</label>
+        <select name="mood" required>
+          <option value="🤩">🤩</option>
+          <option value="😊">😊</option>
+          <option value="😐">😐</option>
+          <option value="😢">😢</option>
+          <option value="😡">😡</option>
+        </select>
+
+        <label>Note (1-5)</label>
+        <input type="number" name="rating" min="1" max="5" required>
+
+        <textarea name="comment" placeholder="Ton commentaire"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <section id="results-section">
+      <h2>📊 Derniers avis</h2>
+      <div id="feedbackList"></div>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
